@@ -1,6 +1,8 @@
 FROM node:19-alpine
 
-VOLUME [ "." ]
+WORKDIR /app
+COPY . /app
+RUN npm install
 
 EXPOSE 3000
-CMD ["npm", "install","&&","npm","run","start"]
+CMD ["npm","run","start"]
