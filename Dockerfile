@@ -1,5 +1,6 @@
 FROM node:19-alpine
 
-VOLUME [ "./"]
+VOLUME [ "." ]
 
+EXPOSE 3000
 CMD ["npm", "install","&&","npm","run","start"]

@@ -1,13 +1,18 @@
-import {fastapi} from 'fastapi';
-import {readFile} from "fs"
-import dotenv from "dotenv"
-dotenv.config()
+import express from "express";
 
-const db = require('./db.json');
+const app = express();
+app.use(express.json());
 
-fastapi.get('/data', (req, res) => {
-    res.status(200).json(db);
-    })
+app.get('/data', (req, res) => {
+    res.status(200).json({nome: "João", idade: 20, oggetti: [{
+        nome: "penna",
+        numero: 10
+    },{
+        nome: "biro",
+        numero: 20
+    }]});
+});
 
-
-fastapi.
+app.listen(3000, () => {
+    console.log(`Server is running on port 3000`);
+});
