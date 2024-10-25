@@ -1,7 +1,6 @@
 FROM node:19-alpine
 
-WORKDIR /app
-COPY . /app
+COPY . /
 RUN npm install
 
 EXPOSE 3000
