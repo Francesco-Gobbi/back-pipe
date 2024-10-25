@@ -1,6 +1,6 @@
 FROM node:19-alpine
 
-COPY . /
+COPY . .
 RUN npm install
 
 EXPOSE 3000
