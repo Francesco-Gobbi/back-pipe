@@ -3,9 +3,9 @@ import cors from "cors";
 const app = express();
 app.use(express.json());
 app.use(cors({
-    origin: 'https://test-pipe-bzak.onrender.com', 
+    origin: ['https://test-pipe-bzak.onrender.com',"http:/localhost:5173"], 
     methods: ['GET', 'POST'], 
-    allowedHeaders: ['Content-Type', 'Authorization']
+    allowedHeaders: ['Content-Type', 'Authorization','']
 }));
 
 app.get('/data', (req, res) => {
