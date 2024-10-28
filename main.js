@@ -9,13 +9,13 @@ app.use(cors({
 }));
 
 app.get('/data', (req, res) => {
-    res.status(200).json({nome: "João", idade: 20, oggetti: [{
+    res.status(200).json([{
         nome: "penna",
         numero: 10
     },{
         nome: "biro",
         numero: 20
-    }]});
+    }]);
 });
 
 app.listen(3000, () => {
